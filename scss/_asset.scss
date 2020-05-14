@@ -1,0 +1,120 @@
+.asset{
+  text-align: center;
+
+    .inplayer-preview-box{
+      max-width: 700px;
+      border: 1px solid #e9edef;
+      padding: 0;
+      border-radius: 0;
+
+      .inplayer-imageholder{
+        background: none;
+        .inplayer-paywallexplain{
+          display: none;
+        }
+      }
+
+      .inplayer-itemdetails{
+        padding: 20px;
+        box-sizing: border-box;
+
+        .inplayer-title{
+          h1, h2, h3, h4, p{
+            font-weight: 700;
+            color: #000;
+            font-size: 1.5em;
+            margin: 0;
+          }
+        }
+
+
+       h1, h2, h3, h4, p{
+          font-weight: 400;
+          font-family: var(--font2);
+        }
+      } // itemdetails
+
+      .inplayer-buybutton{
+        vertical-align: top;
+        padding: 20px;
+
+        button{
+          text-transform: initial;
+          margin: 0;
+
+          @extend .button;
+          @extend .primary;
+
+          &:hover{
+
+            transform: none !important;
+          }
+        }
+      }
+
+      .inplayer-preview-footer{
+        margin-top: 0;
+        display: none;
+      }
+
+      @media (min-width:700px){
+        .inplayer-itemdetails{
+          h1, h2, h3, h4, p{
+            text-align: left;
+          }
+          .inplayer-title, p{
+            text-align: left;
+          }
+        }
+
+        .inplayer-buybutton{
+          float: right;
+          width: initial;
+        }
+      }
+
+    } // inplayer preview box
+
+
+    @media screen and (max-width:700px){
+     .inplayer-preview-box{
+       .inplayer-itemdetails{
+        width: 100%;
+        box-sizing: border-box;
+
+         .inplayer-title{
+           color: #222;
+         }
+       }
+
+       .inplayer-buybutton{
+         position: initial;
+          width: 100%;
+          max-width: 200px;
+          display: block;
+          margin: 5px auto;
+        }
+     }
+    }
+
+    @media (max-width: 900px){
+      .responsive-iframe{
+        // display: block;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+
+        iframe{
+          position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           // border: 0;
+        }
+      }
+
+    }
+
+
+} // asset
