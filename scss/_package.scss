@@ -102,8 +102,19 @@
 	} // package items
 } // package container
 
+@media screen and (max-width: 1240px) {
+	.package-container {
+		max-width: 1000px;
+		.package-item {
+			max-width: 300px !important;
+		}
+	}
+}
 @media screen and (max-width: 944px) {
-	.package-item {
-		max-width: 280px !important;
+	.package-container {
+		max-width: 800px;
+		.package-item {
+			max-width: 280px !important;
+		}
 	}
 }
