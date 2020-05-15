@@ -42,6 +42,10 @@
 	}
 }
 
+.slick-dots li.slick-active button:before {
+	color: var(--primary) !important;
+}
+
 @media screen and (max-width: 610px) {
 	.carousel {
 		margin-bottom: 90px !important;
