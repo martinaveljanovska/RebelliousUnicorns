@@ -91,62 +91,62 @@ $(function () {
 		return false;
 	});
 
-	// DISPLAY SEARCH OVERLAY
-	$("#search").on("click", () => {
-		$("#js-search_container").css({ display: "block", opacity: "1" });
-		$(".nav_search").focus();
-		// $("#nav-wrapper").css({ z-index: "-5" });
-	});
+	// // DISPLAY SEARCH OVERLAY
+	// $("#search").on("click", () => {
+	// 	$("#js-search_container").css({ display: "block", opacity: "1" });
+	// 	$(".nav_search").focus();
+	// 	// $("#nav-wrapper").css({ z-index: "-5" });
+	// });
 
-	// CLOSE SEARCH OVERLAY
-	$("#close").on("click", () => {
-		$("#js-search_container").css({ display: "none", opacity: "0" });
-		$(".nav_search").val("");
-	});
+	// // CLOSE SEARCH OVERLAY
+	// $("#close").on("click", () => {
+	// 	$("#js-search_container").css({ display: "none", opacity: "0" });
+	// 	$(".nav_search").val("");
+	// });
 
-	// SEARCH FUNCTIONALITY
-	function getSuggestions(val) {
-		$.get(
-			"https://services.inplayer.com/items/packages/93409/items?search[]=title:" +
-				val,
-			function (resp) {
-				var results = '<ul class="suggestions_ul nc">';
-				if (resp.total > 0) {
-					for (var i = 0; i < resp.collection.length; i++) {
-						results +=
-							'<li class="suggestion_item nc"><a class="nc" href="./item.html?id=' +
-							resp.collection[i].id +
-							'">' +
-							resp.collection[i].title +
-							"</a></li>";
-					}
-				} else {
-					results +=
-						'<li class="suggestion_item no_result">Sorry, no results found.</li>';
-				}
-				results += "<ul>";
-				$("#suggestion_wrapper").html(results);
-			}
-		);
-	}
+	// // SEARCH FUNCTIONALITY
+	// function getSuggestions(val) {
+	// 	$.get(
+	// 		"https://services.inplayer.com/items/packages/99464/items?search[]=title:" +
+	// 			val,
+	// 		function (resp) {
+	// 			var results = '<ul class="suggestions_ul nc">';
+	// 			if (resp.total > 0) {
+	// 				for (var i = 0; i < resp.collection.length; i++) {
+	// 					results +=
+	// 						'<li class="suggestion_item nc"><a class="nc" href="./item.html?id=' +
+	// 						resp.collection[i].id +
+	// 						'">' +
+	// 						resp.collection[i].title +
+	// 						"</a></li>";
+	// 				}
+	// 			} else {
+	// 				results +=
+	// 					'<li class="suggestion_item no_result">Sorry, no results found.</li>';
+	// 			}
+	// 			results += "<ul>";
+	// 			$("#suggestion_wrapper").html(results);
+	// 		}
+	// 	);
+	// }
 
-	var to = null;
-	$(".nav_search").on("keyup focus", function (e) {
-		var q = $(this).val();
-		if (q.length <= 2) {
-			$("#suggestion_wrapper").html("");
-			return;
-		}
-		clearTimeout(to);
-		to = setTimeout(function () {
-			getSuggestions(q);
-		}, 200);
-	});
+	// var to = null;
+	// $(".nav_search").on("keyup focus", function (e) {
+	// 	var q = $(this).val();
+	// 	if (q.length <= 2) {
+	// 		$("#suggestion_wrapper").html("");
+	// 		return;
+	// 	}
+	// 	clearTimeout(to);
+	// 	to = setTimeout(function () {
+	// 		getSuggestions(q);
+	// 	}, 200);
+	// });
 
-	$("body").on("click", (event) => {
-		var target = $(event.target);
-		if (!$(target[0]).hasClass("nc")) {
-			$("#suggestion_wrapper").html("");
-		}
-	});
+	// $("body").on("click", (event) => {
+	// 	var target = $(event.target);
+	// 	if (!$(target[0]).hasClass("nc")) {
+	// 		$("#suggestion_wrapper").html("");
+	// 	}
+	// });
 });
