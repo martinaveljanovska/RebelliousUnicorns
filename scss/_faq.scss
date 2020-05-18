@@ -2,7 +2,6 @@
 	padding: 50px 0;
 
 	.faq-header {
-		text-align: center;
 		h2 {
 			margin: 0;
 		}
@@ -18,7 +17,6 @@
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
-		box-sizing: border-box;
 
 		ul {
 			list-style: none;
@@ -37,14 +35,10 @@
 
 				a.toggle {
 					display: block;
-					border: 1px solid rgba(39, 36, 35, 0.32);
+					border: 1px solid rgba(255, 255, 255, 0.212);
 					color: #ffffff;
 					text-decoration: none;
 					padding: 0.75em;
-
-					-ms-transition: 0.2s all ease;
-					-moz-transition: 0.2s all ease;
-					-webkit-transition: 0.2s all ease;
 					transition: 0.2s all ease;
 
 					&:hover {
@@ -52,8 +46,8 @@
 					}
 
 					&.active {
-						border-color: rgba(0, 0, 0, 0.25);
-						background: rgba(0, 0, 0, 0.05);
+						border-color: rgba(255, 255, 255, 0.25);
+						background: rgba(255, 255, 255, 0.05);
 						color: rgb(216, 212, 212);
 						font-weight: 500;
 
@@ -69,7 +63,7 @@
 					display: none;
 					line-height: 1.5em;
 					color: #ffffff;
-					border: 1px solid rgba(121, 89, 84, 0.32);
+					border: 1px solid rgba(255, 255, 255, 0.192);
 					border-top: none;
 
 					// &.show {

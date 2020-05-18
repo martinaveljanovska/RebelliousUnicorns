@@ -1,10 +1,10 @@
 :root {
 	--primary: #ff0066;
 	--p-hover: #ce172d;
-	--dark: #091425;
+	--dark: #1B252F;
 
-	--font1: "rift-soft", sans-serif;
-	--font2: "Quicksand", sans-serif;
+	--font1: 'Racing Sans One', cursive;
+	--font2: 'Roboto', sans-serif;
 }
 
 @mixin img($width) {

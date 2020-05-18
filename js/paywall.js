@@ -45,8 +45,8 @@ function createItemElement(assetId, assetPhoto, assetTitle) {
 $(function () {
 	$("#preview-item").html(
 		'<div id="inplayer-' +
-			getParameterByName("id") +
-			'" class="inplayer-paywall"></div>'
+		getParameterByName("id") +
+		'" class="inplayer-paywall"></div>'
 	);
 
 	$(".inplayer-paywall-logout").parent().hide();
@@ -68,9 +68,9 @@ $(function () {
 			$("#title-" + package).html(packageTitle);
 			$.get(
 				config_ip.service_url +
-					"/items/packages/" +
-					package +
-					"/items?limit=500",
+				"/items/packages/" +
+				package +
+				"/items?limit=500",
 				(response) => {
 					var output = "";
 					packageNumber++;
@@ -101,21 +101,16 @@ $(function () {
 							dots: true,
 							responsive: [
 								{
-									breakpoint: 1150,
-									settings: {
-										slidesToShow: 3,
-									},
-								},
-								{
-									breakpoint: 920,
+									breakpoint: 1070,
 									settings: {
 										slidesToShow: 2,
 									},
 								},
 								{
-									breakpoint: 610,
+									breakpoint: 720,
 									settings: {
 										slidesToShow: 1,
+										dots: false,
 									},
 								},
 							],

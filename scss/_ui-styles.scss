@@ -16,19 +16,25 @@ h4 {
 	font-family: var(--font1);
 	font-style: italic;
 	line-height: 1em;
-	color: var(--primary);
+	color: #fff;
+	margin: 0;
 }
 
-.container-title {
-	margin: 10px 0;
+.section-title {
+	font-size: 35px;
+	color: var(--primary);
+	margin-bottom: 30px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 35px;
+	}
 }
 p {
 	line-height: 1.4em;
 }
 
-.bg-white {
-	background-color: #fff;
-}
+.bg-white {background-color: #fff;}
+.bg-blue {background-color: var(--dark);}
 .txt-white {
 	color: #fff;
 }
@@ -39,16 +45,14 @@ p {
 	margin: 0;
 }
 
-.f-size-45 {
-	font-size: 45px;
-}
+
 
 .button {
 	display: inline-block;
 	font-family: var(--font2);
 	font-weight: 700;
 	font-size: 16px;
-	color: #111;
+	color: rgb(255, 255, 255);
 	border-radius: 0;
 	padding: 12px 30px;
 	position: relative;
@@ -94,7 +98,7 @@ a.link {
 	display: none;
 	margin: 0;
 	position: fixed;
-	bottom: 250px;
+	bottom: 150px;
 	right: 23px;
 	width: 35px;
 	height: 35px;
