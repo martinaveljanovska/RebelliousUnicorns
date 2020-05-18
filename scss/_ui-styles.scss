@@ -33,8 +33,12 @@ p {
 	line-height: 1.4em;
 }
 
-.bg-white {background-color: #fff;}
-.bg-blue {background-color: var(--dark);}
+.bg-white {
+	background-color: #fff;
+}
+.bg-blue {
+	background-color: var(--dark);
+}
 .txt-white {
 	color: #fff;
 }
@@ -44,8 +48,6 @@ p {
 	font-size: 20px;
 	margin: 0;
 }
-
-
 
 .button {
 	display: inline-block;
